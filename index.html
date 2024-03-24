@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PES2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        @font-face {
+        font-family: 'ee';
+        src: url('res/ee.ttf');
+        }
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        #textOverlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: white;
+            opacity: 0;
+            animation: fadeInOut 4s forwards;
+            font-family: 'ee';
+            src: url('res/ee.ttf');
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            30% { opacity: 1; }
+            90% { opacity: 1; }
+        }
+    </style>
+    <script>
+        function playSound() {
+            document.getElementById('startSound').load();
+            document.getElementById('startSound').play();
+        }
+    </script>
+</head>
+<body onload="playSound()">
+    <audio id="startSound">
+        <source src="res/start.mp3" type="audio/mp3">
+    </audio>
+    <div id="textOverlay">Petriashvili Entertainment System</div>
+    <script>
+        var blocks = [];
+        var blockSize = 25;
+        function setup() {
+            createCanvas(windowWidth, windowHeight, WEBGL);
+            frameRate(60);
+            var numBlocksX = floor(windowWidth / blockSize) / 2;
+            var numBlocksY = floor(windowHeight / blockSize) / 2;
+            for (let i = 0; i < numBlocksX * numBlocksY; i++) {
+                blocks.push({
+                    x: (i % numBlocksX) * blockSize - numBlocksX * blockSize / 2,
+                    y: floor(i / numBlocksX) * blockSize - numBlocksY * blockSize / 2,
+                    h: random(20, 100)
+                });
+            }
+        }
+    
+        function draw() {
+            background(0, 2, 12);
+            let time = millis();
+            let duration = 8000; 
+            let angle = map(time, 0, duration, 0, 0.5);
+            if (time < duration) {
+                let x = map(time, 0, duration, -width/2, width/2);
+                pointLight(255, 255, 255, x, -450, 0);
+                push();
+                rotateY(angle);
+
+                for (let i = 0; i < blocks.length; i++) {
+                    push();
+                    translate(blocks[i].x, -blocks[i].h / 2 - 200, blocks[i].y);
+                    ambientMaterial(0, 100, 255);
+                    box(20, blocks[i].h, 20);
+                    pop();
+                }
+
+                pop();
+
+                let rotation = map(time * 2, 0, duration, 0, TWO_PI);
+                let height;
+                if (time < duration / 2) {
+                    height = lerp(-700, -600, time / (duration / 2));
+                } else {
+                    height = lerp(-600, 0, (time - duration / 2) / (duration / 2));
+                }
+                camera(0, height, 0, 0, 0, 0, 0, 0, 1);
+            }
+        }
+    </script>
+</body>
+</html>
