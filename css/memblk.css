@@ -37,7 +37,7 @@ body {
   }
 }
 #startButton {
-  background-image: url("res/circle.png");
+  background-image: url("../res/circle.png");
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;

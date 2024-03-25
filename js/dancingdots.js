@@ -1,26 +1,3 @@
-let hoverSound = document.getElementById("hover-sound");
-let clickSound = document.getElementById("click-sound");
-let entrySound = document.getElementById("entry-sound");
-let loopSound = document.getElementById("loop-sound");
-
-window.onload = function () {
-  entrySound.play();
-};
-
-entrySound.onended = function () {
-  loopSound.play();
-};
-
-let menuEntries = document.getElementsByClassName("menu-entry");
-for (let i = 0; i < menuEntries.length; i++) {
-  menuEntries[i].addEventListener("mouseover", function () {
-    hoverSound.play();
-  });
-  menuEntries[i].addEventListener("click", function (e) {
-    clickSound.play();
-  });
-}
-
 let circles = [];
 let time = 0;
 let rotation = 0;
