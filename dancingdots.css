@@ -1,0 +1,53 @@
+#container,
+body {
+  display: flex;
+  height: 100vh;
+}
+@font-face {
+  font-family: ee;
+  src: url("res/ee.ttf");
+}
+body {
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #00020c;
+}
+#menu {
+  font-family: ee;
+  font-size: 3em;
+  src: url("res/ee.ttf");
+  color: #a9a9a9;
+  text-wrap: nowrap;
+  margin-right: 20px;
+}
+.menu-entry {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.menu-entry:hover {
+  color: #03cbcb;
+  text-shadow: 0 0 10px #00008b;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#container {
+  justify-content: center;
+  align-items: center;
+  animation: 4s ease-in-out fadeIn;
+}
+#canvas-container {
+  width: 250%;
+  height: 100%;
+}

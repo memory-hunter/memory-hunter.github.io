@@ -1,0 +1,51 @@
+@font-face {
+  font-family: ee;
+  src: url("res/ee.ttf");
+}
+body {
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+#textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #fff;
+  opacity: 0;
+  animation: 4s forwards fadeInOut;
+  font-family: ee;
+  src: url("res/ee.ttf");
+  display: none;
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  30%,
+  90% {
+    opacity: 1;
+  }
+}
+#startButton {
+  background-image: url("res/circle.png");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
