@@ -13,9 +13,7 @@
     <div id="container">
       <div id="canvas-container"></div>
       <div id="menu">
-        <a href="#" class="menu-entry">Menu 1</a>
-        <a href="#" class="menu-entry">Menu 2</a>
-        <a href="#" class="menu-entry">Menu 3</a>
+        <a href="#" class="menu-entry">Contacts</a>
       </div>
     </div>
     <script>
@@ -24,7 +22,6 @@
       let entrySound = document.getElementById("entry-sound");
       let loopSound = document.getElementById("loop-sound");
 
-
       window.onload = function () {
         entrySound.play();
       };
@@ -32,6 +29,7 @@
       entrySound.onended = function () {
         loopSound.play();
       };
+
       let menuEntries = document.getElementsByClassName("menu-entry");
       for (let i = 0; i < menuEntries.length; i++) {
         menuEntries[i].addEventListener("mouseover", function () {
@@ -94,5 +92,11 @@
         }
       }
     </script>
+    <div id="overlay">
+      <div id="overlay-content">
+        <button id="close-button">X</button>
+        <form id="mail-form"></form>
+      </div>
+    </div>
   </body>
 </html>
