@@ -2,6 +2,7 @@ let hoverSound = document.getElementById("hover-sound");
 let clickSound = document.getElementById("click-sound");
 let entrySound = document.getElementById("entry-sound");
 let loopSound = document.getElementById("loop-sound");
+let closeSound = document.getElementById("close-sound");
 
 window.onload = function () {
   entrySound.play();
@@ -23,10 +24,17 @@ for (let i = 0; i < menuEntries.length; i++) {
   });
 }
 
+let closeBtns = document.getElementsByClassName("close-button");
+for (let i = 0; i < closeBtns.length; i++) {
+  closeBtns[i].addEventListener("click", function () {
+    hoverSound.volume = 0.4;
+    closeSound.play();
+  });
+}
+
 document.querySelectorAll(".menu-entry").forEach((entry) => {
   entry.addEventListener("click", (event) => {
     const overlayId = event.target.getAttribute("data-overlay");
-    // fade in
     document.getElementById(overlayId).style.display = "block";
     document.getElementById(overlayId).style.opacity = 0;
     (function fade() {

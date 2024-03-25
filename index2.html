@@ -11,12 +11,17 @@
     <audio id="click-sound" src="res/select.mp3" preload="auto"></audio>
     <audio id="entry-sound" src="res/entry.mp3" preload="auto"></audio>
     <audio id="loop-sound" src="res/loop.mp3" preload="auto" loop></audio>
+    <audio id="close-sound" src="res/close.mp3" preload="auto"></audio>
     <div id="container">
       <div id="canvas-container"></div>
       <div id="menu">
         <a href="#" class="menu-entry" data-overlay="contacts-overlay"
           >Contacts</a
         >
+        <a href="#" class="menu-entry" data-overlay="personal-projects-overlay"
+          >Personal Projects</a
+        >
+        <a href="#" class="menu-entry" data-overlay="about-overlay">About Me</a>
         <a
           href="https://github.com/memory-hunter/memory-hunter/blob/main/Daviti%20Petriashvili.pdf?raw=true"
           class="menu-entry"
@@ -29,8 +34,8 @@
       <div class="overlay-content">
         <h1>Contact Me</h1>
         <p>
-          Seems like I got your attention. I'm always open to new opportunities and collaborations. Feel free to
-          get in touch with me.
+          Seems like I got your attention. I'm always open to new opportunities
+          and collaborations. Feel free to get in touch with me.
         </p>
         <h2>Email</h2>
         <p><a href="mailto:datoika777@gmail.com">datoika777@gmail.com</a></p>
@@ -38,6 +43,18 @@
         <p>+995 593 30 62 31</p>
         <h2>Telegram</h2>
         <p><a href="https://t.me/m3M0RyHuN73R">t.me/m3M0RyHuN73R</a></p>
+      </div>
+    </div>
+    <div id="personal-projects-overlay" class="overlay">
+      <button class="close-button">X</button>
+      <div class="overlay-content">
+        <h1>Personal Projects</h1>
+      </div>
+    </div>
+    <div id="about-overlay" class="overlay">
+      <button class="close-button">X</button>
+      <div class="overlay-content">
+        <h1>About Me</h1>
       </div>
     </div>
     <script src="js/dancingdots.js"></script>
