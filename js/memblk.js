@@ -2,6 +2,7 @@ function playSound() {
   document.getElementById("startSound").play();
   new p5(sketch);
   document.getElementById("startButton").style.display = "none";
+  document.getElementById("unleash").style.display = "none";
   document.getElementById("textOverlay").style.display = "block";
 }
 var sketch = function (p) {

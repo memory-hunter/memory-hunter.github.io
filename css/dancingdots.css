@@ -5,7 +5,7 @@ body {
 }
 @font-face {
   font-family: ee;
-  src: url("res/ee.ttf");
+  src: url("../res/ee.ttf");
 }
 body {
   justify-content: center;
@@ -18,7 +18,7 @@ body {
 #menu {
   font-family: ee;
   font-size: 3em;
-  src: url("res/ee.ttf");
+  src: url("../res/ee.ttf");
   color: #a9a9a9;
   text-wrap: nowrap;
   margin-right: 20px;
@@ -29,9 +29,11 @@ body {
   color: inherit;
   margin-bottom: 20px;
   transition: color 0.3s, text-shadow 0.3s;
+  transition: transform 0.1s;
 }
 .menu-entry:hover {
   color: #03cbcb;
+  transform: scale(1.2);
   text-shadow: 0 0 10px #00008b;
 }
 @keyframes fadeIn {
@@ -52,25 +54,25 @@ body {
   height: 100%;
 }
 #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;
-    display: none;
-  }
-  
-  #overlay-content {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-  }
-  
-  #close-button {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  display: none;
+}
+
+#overlay-content {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+#close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
