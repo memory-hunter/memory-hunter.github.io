@@ -14,7 +14,7 @@ function setup() {
 
 function draw() {
   background(0, 2, 12);
-  time += 0.01;
+  time += 0.0125;
   rotation += 0.01;
   rotateY(rotation);
   circles.forEach((circle) => {
