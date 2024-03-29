@@ -1,68 +1,176 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Daviti Petriashvili</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/dancingdots.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements.css" />
+  </head>
 
-<head>
-  <title>Daviti Petriashvili</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/dancingdots.css" />
-  <link rel="stylesheet" type="text/css" href="css/elements.css" />
-</head>
-
-<body>
-  <audio id="hover-sound" src="res/choice.mp3" preload="auto"></audio>
-  <audio id="click-sound" src="res/select.mp3" preload="auto"></audio>
-  <audio id="entry-sound" src="res/entry.mp3" preload="auto"></audio>
-  <audio id="loop-sound" src="res/loop.mp3" preload="auto" loop></audio>
-  <audio id="close-sound" src="res/close.mp3" preload="auto"></audio>
-  <div id="container">
-    <div id="canvas-container"></div>
-    <div id="menu">
-      <a href="#" class="menu-entry" data-overlay="about-overlay">About Me</a>
-      <a href="#" class="menu-entry" data-overlay="personal-projects-overlay">Personal Projects</a>
-      <a href="#" class="menu-entry" data-overlay="contacts-overlay">Contacts</a>
-      <a href="https://github.com/memory-hunter/memory-hunter/blob/main/Daviti%20Petriashvili.pdf?raw=true"
-        class="menu-entry">Download my CV↓</a>
+  <body>
+    <audio id="hover-sound" src="res/choice.mp3" preload="auto"></audio>
+    <audio id="click-sound" src="res/select.mp3" preload="auto"></audio>
+    <audio id="entry-sound" src="res/entry.mp3" preload="auto"></audio>
+    <audio id="loop-sound" src="res/loop.mp3" preload="auto" loop></audio>
+    <audio id="close-sound" src="res/close.mp3" preload="auto"></audio>
+    <div id="container">
+      <div id="canvas-container"></div>
+      <div id="menu">
+        <a href="#" class="menu-entry" data-overlay="about-overlay">
+          About Me
+        </a>
+        <a href="#" class="menu-entry" data-overlay="personal-projects-overlay"
+          >Personal Projects</a
+        >
+        <a href="#" class="menu-entry" data-overlay="team-projects-overlay"
+          >Team Projects</a
+        >
+        <a href="#" class="menu-entry" data-overlay="contacts-overlay"
+          >Contacts</a
+        >
+        <a
+          href="https://github.com/memory-hunter/memory-hunter/blob/main/Daviti%20Petriashvili.pdf?raw=true"
+          class="menu-entry"
+          >Download my CV↓</a
+        >
+      </div>
     </div>
-  </div>
-  <div id="contacts-overlay" class="overlay">
-    <button class="close-button">X</button>
-    <div class="overlay-content">
-      <h1>Contact Me</h1>
-      <p>
-        Seems like I got your attention. I'm always open to new opportunities
-        and collaborations. Feel free to get in touch with me.
-      </p>
-      <h2>Email</h2>
-      <p><a href="mailto:datoika777@gmail.com">datoika777@gmail.com</a></p>
-      <h2>Phone</h2>
-      <p>+995 593 30 62 31</p>
-      <h2>Telegram</h2>
-      <p><a href="https://t.me/m3M0RyHuN73R">t.me/m3M0RyHuN73R</a></p>
+    <div id="contacts-overlay" class="overlay">
+      <button class="close-button">X</button>
+      <div class="overlay-content">
+        <h1>Contact Me</h1>
+        <hr>
+        <p>
+          Seems like I got your attention. I'm always open to new opportunities
+          and collaborations. Feel free to get in touch with me.
+        </p>
+        <h2>Email</h2>
+        <p><a href="mailto:datoika777@gmail.com">datoika777@gmail.com</a></p>
+        <h2>Phone</h2>
+        <p>+995 593 30 62 31</p>
+        <h2>Telegram</h2>
+        <p><a href="https://t.me/m3M0RyHuN73R">t.me/m3M0RyHuN73R</a></p>
+      </div>
     </div>
-  </div>
-  <div id="personal-projects-overlay" class="overlay">
-    <button class="close-button">X</button>
-    <div class="overlay-content">
-      <h1>Personal Projects</h1>
+    <div id="personal-projects-overlay" class="overlay">
+      <button class="close-button">X</button>
+      <div class="overlay-content">
+        <h1>Personal Projects</h1>
+        <hr />
+        <h2>The Moon</h2>
+        <p>
+          The Moon is a top-down adventure game, which depicts an ordinary day
+          in a life of a busy girl as a student.
+        </p>
+        <p>
+          An unexpected day comes when she gets teleported to another dimension,
+          where she meets the love of her life.
+        </p>
+        <p>
+          The style, gameplay and feel was motivated by Undertale, since it is
+          one of my favorite games.
+        </p>
+        <p>Code, art, sounds and everything was done by my from ground up.</p>
+        <p>
+          I had to learn the GameMaker script, how the engine worked and other
+          things to construct this on the GMS2 engine.
+        </p>
+        <p>It is yet to be finished, since January, I have created:</p>
+        <ul>
+          <li>Basic movement and interaction</li>
+          <li>Dialogue system</li>
+          <li>Cutscene-like sequences</li>
+          <li>Art and Sounds</li>
+        </ul>
+        <p>
+          The art and setting that I envisioned is quite extensive, as the story
+          will take a turn
+        </p>
+        <p>
+          and transport you to a different dimension. After I create the art,
+          I'd like finalize it.
+        </p>
+        <p>Here is a small demo video of current build.</p>
+        <video controls>
+          <source src="res/themoon.mp4" type="video/mp4" />
+        </video>
+        <hr>
+        <h2>CHIP-8 Emulator</h2>
+        <p>Since I love gaming and hardware, I thought, why not give myself a challenge to make something that does both?</p>
+        <p>I thought that an emulator would be a good start, since it is a low-level project and it would be a good learning experience.</p>
+        <p>I implemented CPU, Memory, Display, and sound generation by code!</p>
+        <p>You can find the source code and a release <a href="https://github.com/memory-hunter/cH80s">here</a></p>
+      </div>
     </div>
-  </div>
-  <div id="about-overlay" class="overlay">
-    <button class="close-button">X</button>
-    <div class="overlay-content">
-      <h1>About Me</h1>
-      <p>Greetings, fellow traveller!</p>
-      <p>I'm Davit Petriashvili, a software engineer based in Georgia.</p>
-      <p>I invite you my to my portfolio page with open hands, baring all I love and have created.</p>
-      <p>My air, water and food is video games.</p>
-      <p>My level of admiration towards games, their creators and hardware that runs them is inexplicable.</p>
-      <p>I love them so much that I decided I would dedicate my life to creating them and preserving them.</p>
-      <p>I'm also passionate about creating optimized software, toolkits and love the low-level playground.</p>
-      <p>Combining hardware with software has always been one of my delights.</p>
-      <p>Take a look at my projects and shenanigans. Contact me if you like them!</p>
+    <div id="team-projects-overlay" class="overlay">
+      <button class="close-button">X</button>
+      <div class="overlay-content">
+        <h1>Team Projects</h1>
+        <hr>
+        <h2>EosEngine</h2>
+        <img src="res/eosengine.png" alt="EosEngine" />
+        <p>EosEngine is a game engine that was created by a team of 4 people at my university, including me.</p>
+        <p>It was done using LWJGL library on Java. I mostly was on the graphical side of things.</p>
+        <p>I was responsible for:</p>
+        <ul>
+          <li>Implementing the whole rendering pipeline</li>
+          <li>Object loading</li>
+          <li>Texturing</li>
+          <li>Lighting</li>
+          <li>General improvements/optimizations in the engine core</li>
+        </ul>
+        <p>You can find the source code <a href="https://github.com/KIU-GEDGADA/EosEngine">here</a></p>
+        <p>Here is a small demo video of the current state of the engine.</p>
+        <img src="res/eospic.png" alt="EosEngine" />
+        <video controls>
+          <source src="res/eosdemo.mp4" type="video/mp4" />
+        </video>
+        <hr>
+        <h2>Galaxies, please!</h2>
+        <p>Galaxies, please! is a "Papers, please!"-esque game, in which you are tasked to identify galaxies correctly, given an image taken by the JWST.</p>
+        <p>This was created on a NASA Space Apps Hackathon 2022 alongside 3 other people. I used PyGame library to program the game.</p>
+        <p>I was responsible for programming the whole gameplay and game loop.</p>
+        <p>You can find the source code <a href="https://github.com/memory-hunter/galaxies-please">here</a></p>
+        <p>Here is a small demo video of the current state of the game.</p>
+        <video controls>
+          <source src="res/galaxies.mp4" type="video/mp4" />
+      </div>
     </div>
-  </div>
-  <script src="js/dancingdots.js"></script>
-  <script src="js/elements.js"></script>
-</body>
-
+    <div id="about-overlay" class="overlay">
+      <button class="close-button">X</button>
+      <div class="overlay-content">
+        <h1>About Me</h1>
+        <hr>
+        <p>Greetings, fellow traveller!</p>
+        <p>I'm Davit Petriashvili, a software engineer based in Georgia.</p>
+        <p>
+          I invite you my to my portfolio page with open hands, baring all I
+          love and have created.
+        </p>
+        <p>My air, water and food is video games.</p>
+        <p>
+          My level of admiration towards games, their creators and hardware that
+          runs them is inexplicable.
+        </p>
+        <p>
+          I love them so much that I decided I would dedicate my life to
+          creating them and preserving them.
+        </p>
+        <p>
+          I'm also passionate about creating optimized software, toolkits and
+          love the low-level playground.
+        </p>
+        <p>
+          Combining hardware with software/games has always been one of my
+          delights.
+        </p>
+        <p>
+          Take a look at my projects and shenanigans. Contact me if you like
+          them!
+        </p>
+      </div>
+    </div>
+    <script src="js/dancingdots.js"></script>
+    <script src="js/elements.js"></script>
+  </body>
 </html>

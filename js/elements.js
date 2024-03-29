@@ -37,6 +37,7 @@ document.querySelectorAll(".menu-entry").forEach((entry) => {
     const overlayId = event.target.getAttribute("data-overlay");
     document.getElementById(overlayId).style.display = "block";
     document.getElementById(overlayId).style.opacity = 0;
+    document.body.classList.add('overlay-open');
     (function fade() {
       var val = parseFloat(document.getElementById(overlayId).style.opacity);
       if (!((val += 0.05) > 1)) {
@@ -56,7 +57,8 @@ document.querySelectorAll(".close-button").forEach((button) => {
         requestAnimationFrame(fade);
       } else {
         button.parentElement.style.display = "none";
+        document.body.classList.remove('overlay-open');
       }
-    })(); 
+    })();
   });
 });
