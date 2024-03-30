@@ -42,6 +42,11 @@ body.overlay-open {
 .overlay-content::-webkit-scrollbar {
   display: none;
 }
+.overlay-content img {
+  display: block;
+  max-width: 15%;
+  border-radius: 50%;
+}
 .close-button {
   font-family: "ee";
   src: url("../res/ee.ttf");
