@@ -42,7 +42,7 @@ body.overlay-open {
 .overlay-content::-webkit-scrollbar {
   display: none;
 }
-.overlay-content img {
+.overlay-content #portrait{
   display: block;
   max-width: 15%;
   border-radius: 50%;
