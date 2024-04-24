@@ -9,9 +9,7 @@ body {
   background-color: #000;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
-  margin: 0;
 }
 #textOverlay {
   position: absolute;
@@ -57,4 +55,22 @@ body {
   transform: scale(2);
   font-family: 'ee';
   src: url("../res/ee.ttf");
+}
+
+#txt {
+  font-family: monospace, monospace;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#content {
+  margin-top: 20%;
+  text-align: center;
+  animation: 4s ease-in-out fadeIn;
 }

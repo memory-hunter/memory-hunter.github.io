@@ -21,8 +21,11 @@ body.overlay-open {
   text-overflow: clip;
   overflow: auto;
   height: 100%;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.overlay-content iframe {
+  display: inline-block;
 }
 .overlay-content video {
   display: inline-block;
@@ -111,4 +114,9 @@ body.overlay-open {
 }
 hr {
   width: 80%;
+}
+#code {
+  font-family: monospace, monospace;
+  color: white;
+  justify-content: center;
 }

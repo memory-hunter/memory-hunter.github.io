@@ -3,6 +3,7 @@ function playSound() {
   new p5(sketch);
   document.getElementById("startButton").style.display = "none";
   document.getElementById("unleash").style.display = "none";
+  document.getElementById("hard").style.display = "none";
   document.getElementById("textOverlay").style.display = "block";
 }
 var sketch = function (p) {
@@ -28,7 +29,7 @@ var sketch = function (p) {
     let duration = 8000;
     let angle = p.map(time, 0, duration, 0, 0.5);
     if (time < duration - 1000) {
-      let x = p.map(time, 0, duration, -p.width / 2, p.width / 2);
+      let x = p.map(time, 0, duration, -p.width / 3, p.width / 2);
       p.pointLight(255, 255, 255, x, -450, 0);
       p.push();
       p.rotateY(angle);
